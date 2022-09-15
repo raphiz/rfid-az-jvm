@@ -1,9 +1,7 @@
-//import org.anarres.gradle.plugin.jnaerator.JNAeratorTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.7.10"
-//    id("dev.atsushieno.jnaerator") version "1.0.100"
     application
 }
 
@@ -32,24 +30,3 @@ tasks.withType<KotlinCompile> {
 application {
     mainClass.set("MainKt")
 }
-
-//tasks.jnaerator {
-//    libraryName("input")
-//    packageName("com.example.jna.input")
-//    headerFiles("/usr/include/linux/input.h")
-//}
-
-//tasks.jnaerator {
-//    libraryName("input")
-//    packageName("com.example.jna.input")
-//    headerFiles("/usr/include/linux/input.h")
-//}
-//tasks.create<JNAeratorTask>("jnaeratorPosix") {
-//    setOutputDir(File(project.buildDir, "generated-sources/jnaerator-posix"))
-//    libraryName("fcntl")
-//    packageName("com.example.jna.fcntl")
-//    headerFiles("/usr/include/fcntl.h")
-//}
-//val jnaeratorPosix = tasks.named<JNAeratorTask>("jnaeratorPosix").get()
-//sourceSets.getByName("main").java.srcDir(jnaeratorPosix.outputDir);
-//project.tasks.getByName("compileJava").dependsOn(jnaeratorPosix);
